@@ -19,9 +19,7 @@ if args.password == None:
 import requests
 import json
 
-"""
-Modify these please
-"""
+
 url='http://%s/ins' % args.ipaddress
 switchuser=args.user
 switchpassword=args.password
@@ -47,4 +45,5 @@ secs = response_body['kern_uptm_secs']
 version = response_body['kickstart_ver_str']
 hostname = response_body['host_name']
 
-print('%s is running %s and has been up for %s days, %s hours, %s mins, %s secs') % (hostname, version, days, hrs, mins, secs)
+print('%s is running %s and has been up for %s days, %s hours, %s mins, %s secs') \
+     % (hostname, version, days, hrs, mins, secs)
